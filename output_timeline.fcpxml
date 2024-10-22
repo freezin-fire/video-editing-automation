@@ -8,17 +8,17 @@
   <library>
     <event name="Video Event">
       <project name="Stitched Videos">
-        <sequence duration="30s">
+        <sequence duration="60s">
           <spine>
-            <clip name="videos/one.mp4" offset="0s" duration="10s">
+            <clip name="videos/one.mp4" offset="0s" duration="20s">
               <video ref="r1"/>
             </clip>
-            <transition name="Cross Dissolve" offset="10s" duration="2s"/>
-            <clip name="videos/two.mp4" offset="10s" duration="10s">
+            <transition name="Cross Dissolve" offset="20s" duration="2s"/>
+            <clip name="videos/two.mp4" offset="20s" duration="20s">
               <video ref="r2"/>
             </clip>
-            <transition name="Cross Dissolve" offset="20s" duration="2s"/>
-            <clip name="videos/three.mp4" offset="20s" duration="10s">
+            <transition name="Cross Dissolve" offset="40s" duration="2s"/>
+            <clip name="videos/three.mp4" offset="40s" duration="20s">
               <video ref="r3"/>
             </clip>
           </spine>

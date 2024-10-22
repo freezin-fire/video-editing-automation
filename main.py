@@ -21,14 +21,14 @@ def create_fcpxml(video_paths, output_file):
     library = ET.SubElement(fcpxml, 'library')
     event = ET.SubElement(library, 'event', {'name': 'Video Event'})
     project = ET.SubElement(event, 'project', {'name': 'Stitched Videos'})
-    sequence = ET.SubElement(project, 'sequence', {'duration': '30s'})
+    sequence = ET.SubElement(project, 'sequence', {'duration': '60s'})
     spine = ET.SubElement(sequence, 'spine')
 
     for i, video_path in enumerate(video_paths):
         clip = ET.SubElement(spine, 'clip', {
             'name': video_path,
-            'offset': f'{i * 10}s',
-            'duration': '10s'
+            'offset': f'{i * 20}s',
+            'duration': '20s'
         })
 
         video = ET.SubElement(clip, 'video', {'ref': f'r{i+1}'})
@@ -36,7 +36,7 @@ def create_fcpxml(video_paths, output_file):
         if i < len(video_paths) - 1:
             transition = ET.SubElement(spine, 'transition', {
                 'name': 'Cross Dissolve',
-                'offset': f'{(i+1) * 10}s',
+                'offset': f'{(i+1) * 20}s',
                 'duration': '2s'
             })
 
