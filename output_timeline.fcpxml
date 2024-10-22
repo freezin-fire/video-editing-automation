@@ -1,0 +1,29 @@
+<?xml version="1.0" ?>
+<fcpxml version="1.8">
+  <resources>
+    <asset id="r1" name="videos/one.mp4" src="file://videos/one.mp4"/>
+    <asset id="r2" name="videos/two.mp4" src="file://videos/two.mp4"/>
+    <asset id="r3" name="videos/three.mp4" src="file://videos/three.mp4"/>
+  </resources>
+  <library>
+    <event name="Video Event">
+      <project name="Stitched Videos">
+        <sequence duration="30s">
+          <spine>
+            <clip name="videos/one.mp4" offset="0s" duration="10s">
+              <video ref="r1"/>
+            </clip>
+            <transition name="Cross Dissolve" offset="10s" duration="2s"/>
+            <clip name="videos/two.mp4" offset="10s" duration="10s">
+              <video ref="r2"/>
+            </clip>
+            <transition name="Cross Dissolve" offset="20s" duration="2s"/>
+            <clip name="videos/three.mp4" offset="20s" duration="10s">
+              <video ref="r3"/>
+            </clip>
+          </spine>
+        </sequence>
+      </project>
+    </event>
+  </library>
+</fcpxml>
